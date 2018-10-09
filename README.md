@@ -11,7 +11,7 @@ La visualización se encuentra disponible en Github en el siguiente enlace:
 
 
 Requisitos
--https://d3js.org/d3.v5.min.js
+-https://d3js.org/d3.v3.min.js
 
 
 # Contexto
