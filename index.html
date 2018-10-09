@@ -46,7 +46,6 @@ var margin = {top: 20, right: 200, bottom: 100, left: 50},
 
 // var parseDate = d3.time.format("%Y%m%d").parse;
 var bisectDate = d3.bisector(function(d) { return d.date; }).left;
-// var bisectDate = d3.bisector(function(a, b) { return a.date - b.date; }).left;
 var xScale = d3.time.scale()
     .range([0, width]),
 
