@@ -15,7 +15,7 @@ Requisitos
 
 
 # Contexto
-Datos suministrados por la NASA referentes a las anomalias (σ) respecto a la media climatica registradas entre los años 1880 hasta la actualidad.
+Datos suministrados por la NASA (GISS, Instituto Goddard de Estudios Espaciales) y  referentes a las anomalias (σ) respecto a la media climatica registradas entre los años 1880 hasta la actualidad.
 
 Los datos originales estan disponibles en:
 
