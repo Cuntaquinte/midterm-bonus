@@ -27,7 +27,8 @@ PreProcesados:
 
 # Objetivos del proyecto (Tarea Principal) y tecnologías usadas:
 El objetivo del proyecto es generar una herramienta que permita ver las variaciones anomalas (desviaciones de la temperatura promedio) en datos de temperaturas en el periodo 1880 - 2018.
-La técnologia utilizada fue html, css,javascript + libreria D3 V3. Los datos se manipularon en los formatos csv.
+
+- La técnologia utilizada fue html, css,javascript + libreria D3 V3. Los datos se manipularon en los formatos csv.
 
 
 # Tareas Secundarias:
