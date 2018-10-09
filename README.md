@@ -60,6 +60,7 @@ Search - Browse >> Outliers
 - Line
 
 ### Canales
+-   Color-Hue
 -   Pos X
 -   Pos Y
 
