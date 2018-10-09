@@ -45,12 +45,12 @@ date	Anual(Enero-Diciembre)	Anual(Diciembre-Noviembre)	Summer(Dic-Ene-Feb)	Autum
 Los datos se obtuvieron de un Dataset tipo Tabla.
 ### Tipos de atributos
 - date:		Ordenado - Ordinal - Secuencial  (Representa los años durante los datos fueron registrados)
-- Anual(J-D):	Ordinal - divergente (Representa las anomalias de temperaturas respecto a la media de ese periodo.)
-- Anual(D-N):	Ordinal - divergente (Representa las anomalias de temperaturas respecto a la media de ese periodo.)
-- Summer:		Ordinal - divergente (Representa las anomalias de temperaturas respecto a la media de ese periodo.)
-- Autumn:		Ordinal - divergente (Representa las anomalias de temperaturas respecto a la media de ese periodo.)
-- Winter:		Ordinal - divergente (Representa las anomalias de temperaturas respecto a la media de ese periodo.)
-- Spring:		Ordinal - divergente (Representa las anomalias de temperaturas respecto a la media de ese periodo.)
+- Anual(J-D):	Ordinal - divergente (Representa las anomalías de temperaturas respecto a la media de ese periodo.)
+- Anual(D-N):	Ordinal - divergente (Representa las anomalías de temperaturas respecto a la media de ese periodo.)
+- Summer:		Ordinal - divergente (Representa las anomalías de temperaturas respecto a la media de ese periodo.)
+- Autumn:		Ordinal - divergente (Representa las anomalías de temperaturas respecto a la media de ese periodo.)
+- Winter:		Ordinal - divergente (Representa las anomalías de temperaturas respecto a la media de ese periodo.)
+- Spring:		Ordinal - divergente (Representa las anomalías de temperaturas respecto a la media de ese periodo.)
 
 
 ## Why?
