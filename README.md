@@ -2,7 +2,7 @@
 datasets VA
 ## README
 
-Midterm Bonus 
+Midterm Bonus (Oct 9, 2018)
 Autores: 
 	## Carlos Moreno Ibarguen  
 
@@ -18,9 +18,9 @@ Datos suministrados por la NASA referentes a las anomalias (σ) respecto a la me
 
 Los datos originales estan disponibles en:
 
-https://data.giss.nasa.gov/gistemp/tabledata_v3/GLB.Ts+dSST.csv
-PreProcesados:  
+- https://data.giss.nasa.gov/gistemp/tabledata_v3/GLB.Ts+dSST.csv
 
+PreProcesados:  
 - https://github.com/Cuntaquinte/midterm-bonus/blob/master/data/dataQ.csv
 
 
