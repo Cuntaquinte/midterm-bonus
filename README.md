@@ -3,6 +3,7 @@ datasets VA
 ## README
 
 Midterm Bonus (Oct 9, 2018)
+
 Autores: 
 	## Carlos Moreno Ibarguen  
 
