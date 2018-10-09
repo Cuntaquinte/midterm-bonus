@@ -8,7 +8,7 @@ Autor:
 ## Carlos Moreno Ibarguen  
 
 La visualización se encuentra disponible en Github en el siguiente enlace:
-
+- https://cuntaquinte.github.io/midterm-bonus/
 
 Requisitos
 -https://d3js.org/d3.v3.min.js
