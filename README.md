@@ -56,11 +56,12 @@ Analyze - Consume- Discover >> Similarity/Trends
 Search - Browse >> Outliers
 
 ## How?
-### Marcas y Canales
-- Marca	  Canales
-- Line	  Color-Hue
--     	  Pos X
--         Pos Y
+### Marcas 
+- Line
+
+### Canales
+-   Pos X
+-   Pos Y
 
 ## Explore  el gráfico!!!.
 Al PASAR el mouse sobre las lineas de las diferentes temporadas puede observar información refernte al comportamiento de temperatura.
