@@ -68,7 +68,7 @@ Los datos se obtuvieron de un Dataset tipo Tabla.
 
 ## Explore  el gráfico!!!.
 Al PASAR el mouse sobre las lineas de las diferentes temporadas puede observar información refernte al comportamiento de temperatura.
-Al hacer CLICK sobre cada uno de los chekbox de las temporadas al lado derecho de la gráfica podra ver los datos referente a cada temporada con distinto color para apreciar las diferencias, los datos de cada momento y en comparación de todas las temporadas se mostraran junto a las leyendas de la gráfica. (podrá escoger datos anuales de Enero a diciembre o diciembre a noviembre asi como cada una de las estaciones (bloques trimestrales del año))
+Al hacer CLICK sobre cada uno de los checkbox de las temporadas al lado derecho de la gráfica podra ver los datos referente a cada temporada con distinto color para apreciar las diferencias, los datos de cada momento y en comparación de todas las temporadas se mostraran junto a las leyendas de la gráfica. (podrá escoger datos anuales de Enero a diciembre o diciembre a noviembre asi como cada una de las estaciones (bloques trimestrales del año))
 En la barra exploratoria de abajo podra hacer zoom en difrentes momentos par apreciar el comportamiento mas detallado, por ejemplo ver el comportamiento climatico en un año en particular.
 
 ## Licencia MIT
