@@ -5,7 +5,7 @@
 
   <link href="css/main.css" rel="stylesheet"/>
 
-<script src="https://d3js.org/d3.v3.js"></script>
+<script src="http://d3js.org/d3.v3.js"></script>
 </head>
 <body>
   <h1>Midterm Bonus</h1>
@@ -25,7 +25,7 @@
       <blockquote id="instrucct"><h4>Instrucciones</h4>
         <p>
         Al PASAR el mouse sobre las <u>lineas</u> de las diferentes temporadas puede observar información refernte al comportamiento de temperatura.<br>
-        Al hacer CLICK sobre cada uno de los <u>chekbox</u> de las temporadas al lado derecho de la gráfica podra ver los datos referente a ada teporada 
+        Al hacer CLICK sobre cada uno de los <u>checkbox</u> de las temporadas al lado derecho de la gráfica podra ver los datos referente a ada teporada 
         con distinto color para apreciar las diferencias, los datos de cada momento y en comparaión de todas las temporadas se mostraran junto a las leyendas de la gráfrica.<br>
         En la <u>barra exploratoria</u> de abajo podra hacer zoom en difrentes momentos par apreciar el comportamiento mas detallado, por ejemplo ver el comportamiento climatico en un año en particular.
 
@@ -44,8 +44,9 @@ var margin = {top: 20, right: 200, bottom: 100, left: 50},
     height = 500 - margin.top - margin.bottom,
     height2 = 500 - margin2.top - margin2.bottom;
 
-// var parseDate = d3.time.format("%Y%m%d").parse;
+// var parseDate = d3.time.format("%Y").parse;
 var bisectDate = d3.bisector(function(d) { return d.date; }).left;
+// var bisectDate = d3.bisector(function(a, b) { return a.date - b.date; }).left;
 var xScale = d3.time.scale()
     .range([0, width]),
 
@@ -65,13 +66,11 @@ var customTimeFormat = d3.time.format.multi([
   ["%Y", function() { return true; }]
 ]);
 
-
 var xAxis = d3.svg.axis()
     .scale(xScale)
-    .orient("bottom")  
-    // .ticks(d3.time.year, 0)
+    .orient("bottom")
     // .tickFormat(d3.time.format('%Y'))
-    // .tickSize(6, 0)
+    .tickSize(6)
     // .tickFormat(d3.time.year)
 ,
     xAxis2 = d3.svg.axis() // xAxis for brush slider
@@ -126,10 +125,11 @@ d3.csv("data/dataQ.csv", function(error, data) {
     return key !== "date"; 
   }));
 
-  data.forEach(function(d) { // Make every date in the csv data a javascript date object format
-    // d.date = parseDate(d.date);
-    d.date = d.date;
-  });
+  // data.forEach(function(d) { // Make every date in the csv data a javascript date object format
+  //   // d.date = parseDate(d.date);
+  //   d.date = d.date;
+  //   console.log("date : "+d.date)
+  // });
 
   var categories = color.domain().map(function(name) { // Nest the data into an array of objects with new keys
 
@@ -163,7 +163,7 @@ d3.csv("data/dataQ.csv", function(error, data) {
   context.append("g") // Create brushing xAxis
       .attr("class", "x axis1")
       .attr("transform", "translate(0," + height2 + ")")
-      .call(xAxis2);
+      .call(xAxis2)
 
   var contextArea = d3.svg.area() // Set attributes for area chart in brushing context graph
     .interpolate("monotone")
@@ -221,12 +221,13 @@ d3.csv("data/dataQ.csv", function(error, data) {
       .style("stroke", function(d) { return color(d.name); });
 
   // draw legend
-  var legendSpace = 450 / categories.length; // 450/number of issues (ex. 40)    
+  var legendSpace = 300 / categories.length; // 450/number of issues (ex. 40)    
 
   issue.append("rect")
       .attr("width", 10)
       .attr("height", 10)                                    
-      .attr("x", width + (margin.right/3) - 15) 
+      // .attr("x", width + (margin.right/3) - 15)            
+      .attr("x", width + (margin.right/2)+50 ) 
       .attr("y", function (d, i) { return (legendSpace)+i*(legendSpace) - 8; })  // spacing
       .attr("fill",function(d) {
         return d.visible ? color(d.name) : "#F1F1F2"; // If array key "visible" = true then color rect, if not then make it grey 
@@ -256,7 +257,6 @@ d3.csv("data/dataQ.csv", function(error, data) {
       })
 
       .on("mouseover", function(d){
-
         d3.select(this)
           .transition()
           .attr("fill", function(d) { return color(d.name); });
@@ -273,14 +273,13 @@ d3.csv("data/dataQ.csv", function(error, data) {
           .attr("fill", function(d) {
           return d.visible ? color(d.name) : "#F1F1F2";});
 
-        d3.select("#line-" + d.name.replace(" ", "").replace("/", ""))
+        d3.select("#line-" + d.name.replace("  ", "").replace("/", ""))
           .transition()
           .style("stroke-width", 1.5);
       })
       
-
   issue.append("text")
-      .attr("x", width + (margin.right/3)) 
+      .attr("x", width + (margin.right/2)-15) 
       .attr("y", function (d, i) { return (legendSpace)+i*(legendSpace); })  // (return (11.25/2 =) 5.625) + i * (5.625) 
       .text(function(d) { return d.name; }); 
 
@@ -337,7 +336,7 @@ d3.csv("data/dataQ.csv", function(error, data) {
       //var graph_y = yScale.invert(mouse_y);
 
       
-      var format = d3.time.format('%Y'); // Format hover date text to show three letter month and full year
+      var format = d3.time.format('%Y'); // Format hover date text to show  full year
     // console.log("Format:: "+(format(graph_x)))
 
       hoverDate.text(format(graph_x)); // scale mouse position to xScale date and format it to show month and year
@@ -366,7 +365,7 @@ d3.csv("data/dataQ.csv", function(error, data) {
          //because you didn't explictly set any data on the <text>
          //elements, each one inherits the data from the focus <g>
 
-         return (d[columnName]);
+         return (d[columnName]+" ("+d.date+")");
       });
   }; 
 
